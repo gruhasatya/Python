@@ -39,5 +39,4 @@ class queue:
 
     def que_rear(self):
         if self.empty():
-            return
-        print(self.Q[self.rear])
+            return        print(self.Q[self.rear])

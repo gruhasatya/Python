@@ -59,26 +59,7 @@ def diameter(root):
     # 3) Height of left subtree + height of right subtree +1
     return max(lheight + rheight, max(ldiameter, rdiameter))
 
-
-# Driver Code
-"""
-Constructed binary tree is
-            1
-          /   \
-        2      3
-      /  \
-    4     5
-"""
-
-root = Node(1)
-root.left = Node(2)
-root.right = Node(3)
-root.left.left = Node(4)
-root.left.right = Node(5)
-
-# Function Call
-print(diameter(root))
-
+`
 
 
 
@@ -157,6 +138,71 @@ if __name__ == '__main__':
     print()
     print("Inorder traversal after insertion:", end=" ")
     inorder(root)
+
+
+class node():
+    def __init__(self, data):
+        self.left = None
+        self.right = None
+        self.data = data
+
+    def inorder(temp):
+        if (not temp):
+            return
+
+        inorder(temp.left)
+        inorder(temp.data, end = "")
+        inorder(temp.right)
+
+    def insert(temp, key):
+        if not temp:
+            root = node(key)
+            return
+        q = []
+        q.append(temp)
+
+        while(len(q)):
+            temp = q[0]
+            q.pop(0)
+
+            if(not temp.left):
+                temp.left = node(key)
+                break
+            else:
+                q.append(temp.left)
+            if (not temp.right):
+                temp.right = node(key)
+                break
+            else:
+                q.append(temp.right)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

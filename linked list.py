@@ -131,62 +131,136 @@ if__name__ == '__main__':
     #             current = current.next
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class node:
-    def__init__(self, data):
-    self.data = data
-    self.next = None
+    def __init__(self, data):
+        self.data = data
+        self.next = None
 
+class ll:
+    def __init__(self):
+        self.head = None
 
-class linkedlist:
-    def__init__(self):
-    self.head = None
-
-
-def push(self, new_data):
-    new_node = node(new_data)
-    new_node.next = self.head
-    self.head = new_node
-
-
-def middle(self, previous_node, new_data):
-    new_node = node(new_data)
-    new_node.next = previous_node.next
-    previous_node.next = new_node
-
-
-def last(self, new_data):
-    new_node = node(new_data)
-    if self.head is None:
+    def push(self, new_data):
+        new_node = node.(new_data)
+        new_node.next = self.head
         self.head = new_node
-        return
-    last = self.head
-    while (last.next):
-        last = last.next
+
+    def middle(self, previous , new_data):
+        if previous is None
+            new_node = node(new_data)
+            new_node.next = previous.next
+            previous.next = new_node
+
+    def last(self, new_data):
+        new_node = node(new_data)
+        new_node.next = None
+        if self.head is None
+            self.head = new_node
+            return
+
+        last = self.head
+        while(last.next):
+            last=last.next
+
         last.next = new_node
 
+        # Utility function to print the linked list
+        def printList(self):
+            temp = self.head
+            while (temp):
+                print(temp.data, end=" ")
+                temp = temp.next
 
-def delete(self, node_delete):
-    temp = self.head
-    if (temp.head is not None):
-        if (temp.data == node_delete):
-            self.head = temp.next
-            temp = None
+    # Code execution starts here
+    if __name__ == '__main__':
+        # Start with the empty list
+        llist = LinkedList()
 
+        # Insert 6.  So linked list becomes 6->None
+        llist.append(6)
 
-while (temp is not None):
-    if temp.data = node_delete:
-        break
-    prev = temp
-    temp = temp.next
+        # Insert 7 at the beginning. So linked list becomes 7->6->None
+        llist.push(7);
 
-if (temp == None):
-    return
-prev.next = temp.next
-temp = None
+        # Insert 1 at the beginning. So linked list becomes 1->7->6->None
+        llist.push(1);
 
+        # Insert 4 at the end. So linked list becomes 1->7->6->4->None
+        llist.append(4)
 
-def print(slef):
-    temp = slef.head
-    while (temp):
-        print(temp.data, end="")
-        temp = temp.next
+        # Insert 8, after 7. So linked list becomes 1 -> 7-> 8-> 6-> 4-> None
+        llist.insertAfter(llist.head.next, 8)
+
+        print('Created linked list is: ')
+        llist.printList()
+
