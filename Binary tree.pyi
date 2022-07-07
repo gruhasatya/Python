@@ -1,16 +1,3 @@
-class Node:
-    # Tree structure
-    def __init__(self, key):
-        self.left = None
-        self.right = None
-        self.val = key
-    # Root
-
-
-
-
-
-
 # Basic structure
 
 # Python3 program to find the diameter of binary tre
@@ -139,25 +126,24 @@ if __name__ == '__main__':
     print("Inorder traversal after insertion:", end=" ")
     inorder(root)
 
-
-class node():
+class Node:
     def __init__(self, data):
         self.left = None
         self.right = None
-        self.data = data
+        self.key = data
 
     def inorder(temp):
         if (not temp):
             return
-
         inorder(temp.left)
-        inorder(temp.data, end = "")
+        print(temp.key, end=" ")
         inorder(temp.right)
 
     def insert(temp, key):
         if not temp:
-            root = node(key)
+            root = Node(key)
             return
+
         q = []
         q.append(temp)
 
@@ -165,22 +151,18 @@ class node():
             temp = q[0]
             q.pop(0)
 
-            if(not temp.left):
-                temp.left = node(key)
+            if (not temp.left):
+                temp.left = Node(key)
                 break
+
             else:
                 q.append(temp.left)
+
             if (not temp.right):
-                temp.right = node(key)
+                temp.right = Node(key)
                 break
             else:
                 q.append(temp.right)
-
-
-
-
-
-
 
 
 

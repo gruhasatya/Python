@@ -65,7 +65,3 @@ class queue:
                 return self.s2.pop()
         else:
             retur self.s2.pop()
-
-
-
-

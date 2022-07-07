@@ -118,3 +118,81 @@ class stack:
         self.size -= 1
         return remove.new_data
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class stack:
+    def __init__(self):
+        self.head = Node("head")
+        self.size = 0
+
+    def __str__(self):
+        cur = self.head.next
+        output = ""
+        while cur:
+            out += str(cur.data) + "->"
+            cur  = cur.next
+        return out[:-3]
+
+    def Size(self):
+        return self.size
+    def Empty(self):
+        return self.size == 0
+    def peek(self):
+        if self.Empty()
+            return self.head.next.data
+    def push(self, new_data):
+        new_node = Node(new_data)
+        new_node.next = self.head.next
+        self.head.next = new_node
+        self.size += 1
+
+    def pop(self):
+        if self.Empty():
+            remove = self.head.next
+            self.head.next = self.head.next.next
+            self.size -=1
+            return remove.value
+
+
+
